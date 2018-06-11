@@ -1,9 +1,8 @@
 import angular from 'angular';
 
-import Core from './Core/Main.module';
-import Admin from './Admin/Main.module';
-import Public from './Public/Main.module';
+import core from './core/core.module';
 
+import phoneListComponent from './phone-list/phone-list.component.js'
 
 
 class IndexController {
@@ -16,5 +15,8 @@ class IndexController {
     }
 }
 
-angular.module('App', ['Core', 'Admin', 'Public'])
+angular.module('App', [
+        'core'
+    ])
     .controller('IndexController', IndexController)
+    .component('phoneList', phoneListComponent)

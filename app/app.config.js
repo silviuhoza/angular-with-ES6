@@ -1,20 +1,31 @@
 
+ function config($locationProvider, $routeProvider) {
+      $locationProvider.hashPrefix('!');
 
+      $routeProvider.
+      when('/phones', {
+          template: '<phone-list></phone-list>'
+      }).
+      when('/phones/:phoneId', {
+          template: '<phone-details></phone-details>'
+      }).
+      otherwise('/phones');
+ }
 
+export default config;
+// angular.
+// module('App').
+// config(['$locationProvider', '$routeProvider',
+//     function config($locationProvider, $routeProvider) {
+//         $locationProvider.hashPrefix('!');
 
-angular.
-module('App').
-config(['$locationProvider', '$routeProvider',
-    function config($locationProvider, $routeProvider) {
-        $locationProvider.hashPrefix('!');
-
-        $routeProvider.
-        when('/phones', {
-            template: '<phone-list></phone-list>'
-        }).
-        when('/phones/:phoneId', {
-            template: '<phone-details></phone-details>'
-        }).
-        otherwise('/phones');
-    }
-]);
+//         $routeProvider.
+//         when('/phones', {
+//             template: '<phone-list></phone-list>'
+//         }).
+//         when('/phones/:phoneId', {
+//             template: '<phone-details></phone-details>'
+//         }).
+//         otherwise('/phones');
+//     }
+// ]);

@@ -13,16 +13,28 @@ import template from './phone-details.template.html';
 import componentStyle from './phone-details.css';
 
 class phoneDetailsController {
-    constructor($routeParams) {
+    constructor($routeParams ,$http) {
       
         this.componentName = 'phoneDetailsController';
       
-         this.phoneId = $routeParams.phoneId;
-         this.phone ="salut"
+        //  this.phoneId = $routeParams.phoneId;
+        //  this.phone ="salut"
+       var self = this;
+        // $http.get('phones/' + $routeParams.phoneId + '.json').then(function (response) {
+        //     self.phone = response.data;
+        // });
+         self.setImage = function setImage(imageUrl) {
+             self.mainImageUrl = imageUrl;
+         };
+
+         $http.get('phones/' + $routeParams.phoneId + '.json').then(function (response) {
+             self.phone = response.data;
+             self.setImage(self.phone.images[0]);
+         });
     }
 
     $onInit() {
-       console.log(this.phone);
+    //    console.log(this.phone);
        console.log(this.componentName);
     }
     

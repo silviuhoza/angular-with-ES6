@@ -4,7 +4,7 @@ import core from './core/core.module';
 
 import ngRoute from 'angular-route';
 
-// import ngAnimate from 'angular-animate';
+import ngAnimate from 'angular-animate';
 
 import config from './app.config';
 
@@ -29,7 +29,8 @@ class IndexController {
 
 angular.module('App', [
         'core',
-        'ngRoute'
+        'ngRoute',
+        'ngAnimate'
     ])
     .config(config)
     .controller('IndexController', IndexController)

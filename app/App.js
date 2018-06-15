@@ -8,7 +8,9 @@ import ngAnimate from 'angular-animate';
 
 import config from './app.config';
 
-import checkmark from "./core/checkmark/checkmark.filter"
+// import checkmark from "./core/checkmark/checkmark.filter"
+
+import phoneAnimate from './app.animation'
 
 import phoneListComponent from './phone-list/phone-list.component';
 

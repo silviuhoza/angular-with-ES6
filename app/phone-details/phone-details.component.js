@@ -23,19 +23,23 @@ class phoneDetailsController {
         // $http.get('phones/' + $routeParams.phoneId + '.json').then(function (response) {
         //     self.phone = response.data;
         // });
-         self.setImage = function setImage(imageUrl) {
-             self.mainImageUrl = imageUrl;
-         };
+        
 
          $http.get('phones/' + $routeParams.phoneId + '.json').then(function (response) {
              self.phone = response.data;
              self.setImage(self.phone.images[0]);
          });
+
+        
+
+        self.setImage = function setImage(imageUrl) {
+            self.mainImageUrl = imageUrl;
+        };
     }
 
     $onInit() {
     //    console.log(this.phone);
-       console.log(this.componentName);
+    //    console.log(this.componentName);
     }
     
 

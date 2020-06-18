@@ -23,7 +23,7 @@
     "author": "Victor JEMAN",
     "license": "ISC",
     "devDependencies": {
-        "angular": "^1.6.4",
+        "angular": "^1.8.0",
         "babel-cli": "^6.24.1",
         "babel-loader": "^6.4.1",
         "babel-plugin-add-module-exports": "^0.2.1",
